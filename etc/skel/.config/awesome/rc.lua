@@ -474,9 +474,9 @@ globalkeys = my_table.join(
         {description = "go back", group = "tag"}),
 
      -- Tag browsing alt + j/k
-    awful.key({ altkey,           }, "j",   awful.tag.viewnext,
+    awful.key({ altkey,           }, "k",   awful.tag.viewnext,
         {description = "view next", group = "altkey"}),
-    awful.key({ altkey,           }, "k",  awful.tag.viewprev,
+    awful.key({ altkey,           }, "j",  awful.tag.viewprev,
         {description = "view previous", group = "altkey"}),
 
      -- Tag browsing modkey + tab
