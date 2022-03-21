@@ -473,11 +473,11 @@ globalkeys = my_table.join(
     awful.key({ altkey,           }, "Escape", awful.tag.history.restore,
         {description = "go back", group = "tag"}),
 
-     -- Tag browsing alt + tab
-    awful.key({ altkey,           }, "Tab",   awful.tag.viewnext,
-        {description = "view next", group = "tag"}),
-    awful.key({ altkey, "Shift"   }, "Tab",  awful.tag.viewprev,
-        {description = "view previous", group = "tag"}),
+     -- Tag browsing alt + j/k
+    awful.key({ altkey,           }, "j",   awful.tag.viewnext,
+        {description = "view next", group = "altkey"}),
+    awful.key({ altkey,           }, "k",  awful.tag.viewprev,
+        {description = "view previous", group = "altkey"}),
 
      -- Tag browsing modkey + tab
     awful.key({ modkey,           }, "Tab",   awful.tag.viewnext,
@@ -493,13 +493,13 @@ globalkeys = my_table.join(
              -- {description = "view  next nonempty", group = "tag"}),
 
     -- Default client focus
-    awful.key({ altkey,           }, "j",
+    awful.key({ altkey,           }, "Tab",
         function ()
             awful.client.focus.byidx( 1)
         end,
         {description = "focus next by index", group = "client"}
     ),
-    awful.key({ altkey,           }, "k",
+    awful.key({ modkey,           }, "Tab",
         function ()
             awful.client.focus.byidx(-1)
         end,
